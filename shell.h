@@ -31,8 +31,6 @@
 #define HIST_MAX	4096
 
 extern char **environ;
-
-
 /**
  * struct list - singly linked list
  * @n: the number field
@@ -141,26 +139,19 @@ int _putchar(char);
 char *_strncpy(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
-
-/* string_functions4.c */
+/* func4.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-/* memory_functions */
+/* more_func */
 char *_memset(char *, char, unsigned int);
 void ffree(char **);
 void *_realloc(void *, unsigned int, unsigned int);
-
-/* memory_functions2.c */
 int bfree(void **);
-
-/* more_functions.c */
 int interactive(info_t *);
 int is_delim(char, char *);
 int _isalpha(int);
 int _atoi(char *);
-
-/* more_functions2.c */
 int _erratoi(char *);
 void print_error(info_t *, char *);
 int print_d(int, int);
@@ -205,14 +196,14 @@ int read_history(info_t *info);
 int build_history_list(info_t *info, char *buf, int linecount);
 int renumber_history(info_t *info);
 
-/* liststr.c module */
+/* string_list.c */
 list_t *add_node(list_t **, const char *, int);
 list_t *add_node_end(list_t **, const char *, int);
-size_t print_list_str(const list_t *);
-int delete_node_at_index(list_t **, unsigned int);
+size_t print_string(const list_t *);
+int delete_node(list_t **, unsigned int);
 void free_list(list_t **);
 
-/* liststr2.c module */
+/* string_list2.c */
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
