@@ -13,14 +13,12 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
+ * _strcmp - comparison of two strangs.
  * @s1: the first strang
  * @s2: the second strang
  * Return: 0, negative, positive
  */
 int _strcmp(char *s1, char *s2)
-{
-	int _strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s2)
 	{

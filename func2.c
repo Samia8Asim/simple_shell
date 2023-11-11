@@ -7,19 +7,20 @@
  */
 char *_strcon(char *d, char *s)
 {
+	char *r = d;
+
 	while (*d)
 		d++;
 	while (*s)
 		*d++ = *s++;
 	*d = *s;
-	return (s);
+	return (r);
 }
 /**
  * _strcpy - copies a string
  * @d: the destination
  * @s: the source
- *
- * Return: pointer to destination
+ * Return: pointer
  */
 char *_strcpy(char *d, char *s)
 {
@@ -29,7 +30,7 @@ char *_strcpy(char *d, char *s)
 		return (d);
 	for (i = 0; s[i] != '\0'; i++)
 		d[i] = s[i];
-	d[i] = '\0';
+	d[i] = 0;
 	return (d);
 }
 /**

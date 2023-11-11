@@ -8,10 +8,9 @@
  */
 char *_strncpy(char *d, char *sr, int n)
 {
-	int i, j;
+	int i = 0, j;
 	char *s = d;
 
-	i = 0;
 	while (sr[i] != '\0' && i < n - 1)
 	{
 		d[i] = sr[i];
@@ -29,19 +28,17 @@ char *_strncpy(char *d, char *sr, int n)
 	return (s);
 }
 /**
- **_strncat - concatenat
+ **_strncon - concatenat
  *@d: the first string
  *@sr: second string
  *@n: the amount of bytes
  *Return: string
  */
-char *_strncat(char *d, char *sr, int n)
+char *_strncon(char *d, char *sr, int n)
 {
-	int i, j;
+	int i = 0, j = 0;
 	char *s = d;
 
-	i = 0;
-	j = 0;
 	while (d[i] != '\0')
 		i++;
 	while (sr[j] != '\0' && j < n)

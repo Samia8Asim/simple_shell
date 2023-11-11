@@ -46,7 +46,7 @@ void *_realloc(void *p, unsigned int o_size, unsigned int n_size)
 	if (n_size == o_size)
 		return (p);
 
-	p = malloc(n_size);
+	r = malloc(n_size);
 	if (!r)
 		return (NULL);
 

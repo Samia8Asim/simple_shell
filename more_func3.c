@@ -89,14 +89,14 @@ char *convert_number(long int num, int b, int flags)
 {
 	static char *a;
 	static char buffer[50];
-	char sign = 0;
+	char s = 0;
 	char *p;
 	unsigned long n = num;
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
-		sign = '-';
+		s = '-';
 
 	}
 	a = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
@@ -108,8 +108,8 @@ char *convert_number(long int num, int b, int flags)
 		n /= b;
 	} while (n != 0);
 
-	if (sign)
-		*--p = sign;
+	if (s)
+		*--p = s;
 	return (p);
 }
 /**

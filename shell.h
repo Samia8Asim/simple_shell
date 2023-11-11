@@ -119,11 +119,11 @@ char *find_path(info_t *, char *, char *);
 /* loophsh.c */
 int loophsh(char **);
 
-/* err_string_functions.c */
+/* string_error.c */
 void _eputs(char *);
 int _eputchar(char);
-int _putfd(char c, int fd);
-int _putsfd(char *str, int fd);
+int _putfd(char c, int f);
+int _putsfd(char *s, int f);
 
 /* func1.c */
 int _strlen(char *);
@@ -137,7 +137,7 @@ void _puts(char *);
 int _putchar(char);
 /* func3.c */
 char *_strncpy(char *, char *, int);
-char *_strncat(char *, char *, int);
+char *_strncon(char *, char *, int);
 char *_strchr(char *, char);
 /* func4.c */
 char **strtow(char *, char *);
