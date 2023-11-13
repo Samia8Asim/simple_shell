@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * env_now - function that prints the current environment
+ * _myenv - function that prints the current environment
  * @info_init: srtuctre to containing arguments
  * Return: 0 (success)
  */
-int env_now(info_t *info_init)
+int _myenv(info_t *info_init)
 {
 	print_list_str(info_init->env);
 	return (0);
@@ -35,12 +35,11 @@ char *_getenv(info_t *info_init, const char *vname)
 }
 
 /**
- * _setvenv - 
- * Initialize or modify environment variable
+ * _mysetvenv -  Initialize or modify environment variable
  * @info_init: srtuctre to containing arguments
  * Return: 0(success) 
  */
-int _setvenv(info_t *info_init)
+int _mysetvenv(info_t *info_init)
 {
 	if (info_init->argc != 3)
 	{
@@ -54,11 +53,11 @@ int _setvenv(info_t *info_init)
 }
 
 /**
- * _unsetvenv - function that removes the environmnt variable
+ * _myunsetvenv - function that removes the environmnt variable
  * @info_init: srtuctre to containing arguments
  * Return: 0(success) 
  */
-int _unsetvenv(info_t *info_init)
+int _myunsetvenv(info_t *info_init)
 {
 	int i;
 
@@ -74,11 +73,11 @@ int _unsetvenv(info_t *info_init)
 }
 
 /**
- * populate_env_linlist - function that populates the env linked list
+ * populate_env_list - function that populates the env linked list
  * @info_init:  srtuctre to containing arguments
  * Return: 0(success)
  */
-int populate_env_linlist(info_t *info_init)
+int populate_env_list(info_t *info_init)
 {
 	list_t *node = NULL;
 	size_t i = 0;

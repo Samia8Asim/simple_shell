@@ -12,11 +12,11 @@ int _myhistory(info_t *info_init)
 }
 
 /**
- *  * unset_alias - sets alias to string
- *   * @info_init: srtuctre to containing arguments
- *    * @s: alias string
- *     * Return: 0(success) , 1(error)
- *      */
+ * unset_alias - sets alias to string
+ * @info_init: srtuctre to containing arguments
+ * @s: alias string
+ * Return: 0(success) , 1(error)
+ */
 int unset_alias(info_t *info_init, char *s)
 {
 	int ret;

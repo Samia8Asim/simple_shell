@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * info_clear - initializes the struct info_t 
+ * clear_info - initializes the struct info_t 
  * @info_init: adress of struct 
  */
-void info_clear(info_t *info_init)
+void clear_info(info_t *info_init)
 {
 	info_init->arg = NULL;
 	info_init->argv = NULL;
@@ -13,11 +13,11 @@ void info_clear(info_t *info_init)
 }
 
 /**
- * info_set - initializes the struct info_t
+ * set_info - initializes the struct info_t
  * @info_init: adress of struct
  * @avec: argument vector
  */
-void info_set(info_t *info_init,char **avec)
+void set_info(info_t *info_init,char **avec)
 {
 	int i = 0;
 
