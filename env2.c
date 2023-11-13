@@ -19,7 +19,7 @@ char **get_environ(info_t *info_init)
 /**
  * _unsetenv - Remove the environment variable
  * @info_init: srtuctre to containing arguments
- * @str_var: property of string env var 
+ * @str_var: property of string env var
  * Return: 1 if removed, 0 otherwise
  */
 int _unsetenv(info_t *info_init, char *str_var)

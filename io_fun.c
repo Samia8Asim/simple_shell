@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * get_history_file - gets file history 
+ * get_history_file - gets file history
  * @info_init: srtuctre to containing arguments
- * Return: allocated string 
+ * Return: allocated string
  */
 
 char *get_history_file(info_t *info_init)
@@ -65,7 +65,6 @@ int read_history(info_t *info_init)
 
 	if (!file_name)
 		return (0);
-
 	fh = open(file_name, O_RDONLY);
 	free(file_name);
 	if (fd == -1)

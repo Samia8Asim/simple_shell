@@ -2,9 +2,8 @@
 
 /**
  * main - entry point of the program.
- * argc: number of argument .
- * argv: list of argument.
-  
+ * @argc: number of argument
+ * @argv: list of argument
  * Return: 0 on success and 1 if any error occur.
  */
 

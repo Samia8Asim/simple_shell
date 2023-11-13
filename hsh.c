@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * hsh - loop of main shell 
+ * hsh - loop of main shell
  * @info_init: srtuctre to containing arguments
- * @avec: main() argument vector 
+ * @avec: main() argument vector
  * Return: 0 (success), 1(error)
  */
 int hsh(info_t *info_init, char **avec)
@@ -47,7 +47,7 @@ int hsh(info_t *info_init, char **avec)
  * @info_init: srtuctre to containing arguments
  * Return: -1 (builtin not found),
  *		0  (builtin executed successfully),
- * 		1 (builtin found but not successful),
+ *		1 (builtin found but not successful),
  *		-2 (builtin signals exit())
  */
 int find_builtin(info_t *info_init)

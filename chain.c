@@ -4,7 +4,7 @@
  * is_chain - function to test if current char is a chain delimeter
  * @info_init: srtuctre to containing arguments
  * @buffe: the charater buffer
- * @ptr: current position (in buf)adrdress 
+ * @ptr: current position (in buf)adrdress
  * Return: 1 (chain delimeter), 0 otherwise
  */
 int is_chain(info_t *info_init, char *buffer, size_t *ptr)
@@ -38,11 +38,12 @@ int is_chain(info_t *info_init, char *buffer, size_t *ptr)
  * check_chain - checks if should continue chaining based on last status
  * @info_init: srtuctre to containing arguments
  * @buffer: the character buffer
- * @ptr:  current position (in buffer) address 
+ * @ptr:  current position (in buffer) address
  * @j: buffer starting position
  * @leng: length of buffer
  */
-void check_chain(info_t *info_init, char *buffer, size_t *ptr, size_t j, size_t leng)
+void check_chain(info_t *info_init, char *buffer,
+		size_t *ptr, size_t j, size_t leng)
 {
 	size_t i = *ptr;
 

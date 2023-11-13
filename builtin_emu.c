@@ -9,7 +9,7 @@ int _myexit(info_t *info_init)
 {
 	int check_exit;
 
-	if (info->argv[1])  
+	if (info->argv[1])
 	{
 		check_exit = _erratoi(info_init->argv[1]);
 		if (check_exit == -1)
@@ -44,7 +44,7 @@ int _mycd(info_t *info_init)
 	{
 		dir = _getenv(info_init, "HOME=");
 		if (!dir)
-			ret_chdir = 
+			ret_chdir =
 				chdir((dir = _getenv(info_init, "PWD=")) ? dir : "/");
 		else
 			ret_chdir = chdir(dir);
@@ -58,7 +58,7 @@ int _mycd(info_t *info_init)
 			return (1);
 		}
 		_puts(_getenv(info_init, "OLDPWD=")), _putchar('\n');
-		ret_chdir = 
+		ret_chdir =
 			chdir((dir = _getenv(info_init, "OLDPWD=")) ? dir : "/");
 	}
 	else
@@ -88,6 +88,6 @@ int _myhelp(info_t *info_init)
 	arg_arr = info_init->argv;
 	_puts("help call works. Function not yet implemented \n");
 	if (0)
-		_puts(*arg_arr); 
+		_puts(*arg_arr);
 	return (0);
 }

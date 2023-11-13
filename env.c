@@ -37,7 +37,7 @@ char *_getenv(info_t *info_init, const char *vname)
 /**
  * _mysetvenv -  Initialize or modify environment variable
  * @info_init: srtuctre to containing arguments
- * Return: 0(success) 
+ * Return: 0(success)
  */
 int _mysetvenv(info_t *info_init)
 {
@@ -55,7 +55,7 @@ int _mysetvenv(info_t *info_init)
 /**
  * _myunsetvenv - function that removes the environmnt variable
  * @info_init: srtuctre to containing arguments
- * Return: 0(success) 
+ * Return: 0(success)
  */
 int _myunsetvenv(info_t *info_init)
 {
