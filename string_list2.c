@@ -79,7 +79,7 @@ list_t *node_starts_with(list_t *node, char *pre, char c)
 
 	while (node)
 	{
-		p = starts_with(node->s, pre);
+		p = start(node->s, pre);
 		if (p && ((c == -1) || (*p == c)))
 			return (node);
 		node = node->next;

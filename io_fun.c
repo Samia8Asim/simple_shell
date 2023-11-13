@@ -18,8 +18,8 @@ char *get_history_file(info_t *info_init)
 		return (NULL);
 	buffer[0] = 0;
 	_strcpy(buffer, dir);
-	_strcat(buffer, "/");
-	_strcat(buffer, HIST_FILE);
+	_strcon(buffer, "/");
+	_strcon(buffer, HIST_FILE);
 	return (buffer);
 }
 
@@ -37,16 +37,16 @@ int write_history(info_t *info_init)
 	if (!file_name)
 		return (-1);
 
-	fh = open(filename, O_CREAT | O_TRUNC | O_RDWR, 0644);
+	fh = open(file_name, O_CREAT | O_TRUNC | O_RDWR, 0644);
 	free(file_name);
-	if (fd == -1)
+	if (fh == -1)
 		return (-1);
 	for (node = info_init->history; node; node = node->next)
 	{
-		_putsfh(node->str, fh);
-		_putfh('\n', fh);
+		_putsfd(node->s, fh);
+		_putfd('\n', fh);
 	}
-	_putfh(BUF_FLUSH, fd);
+	_putfd(BUF_FLUSH, fh);
 	close(fh);
 	return (1);
 }
@@ -67,7 +67,7 @@ int read_history(info_t *info_init)
 		return (0);
 	fh = open(file_name, O_RDONLY);
 	free(file_name);
-	if (fd == -1)
+	if (fh == -1)
 		return (0);
 	if (!fstat(fh, &st))
 		fsize = st.st_size;
@@ -95,7 +95,7 @@ int read_history(info_t *info_init)
 	free(buffer);
 	info_init->histcount = linec;
 	while (info->histcount-- >= HIST_MAX)
-		delete_node_at_index(&(info_init->history), 0);
+		delete_node(&(info_init->history), 0);
 	renumber_history(info_init);
 	return (info_init->histcount);
 }
@@ -112,7 +112,7 @@ int build_history_list(info_t *info_init, char *buffer, int linec)
 	list_t *node = NULL;
 
 	if (info_init->history)
-		node = info->history;
+		node = info_t->history;
 	add_node_end(&node, buffer, linec);
 
 	if (!info_init->history)
@@ -132,7 +132,7 @@ int renumber_history(info_t *info_init)
 
 	while (node)
 	{
-		node->num = n++;
+		node->n = n++;
 		node = node->next;
 	}
 	return (info_init->histcount = n);

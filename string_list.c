@@ -33,11 +33,11 @@ list_t *add_node(list_t **h, const char *str, int num)
 /**
  * add_node_end - adds a node to the end of the list
  * @h: address of pointer
- * @str: str field of node
- * @num: node index used by history
+ * @s: str field of node
+ * @n: node index used by history
  * Return: size of list
  */
-list_t *add_node_end(list_t **h, const char *str, int num)
+list_t *add_node_end(list_t **h, const char *s, int n)
 {
 	list_t *new, *node;
 
@@ -50,7 +50,7 @@ list_t *add_node_end(list_t **h, const char *str, int num)
 		return (NULL);
 	_memset((void *)new, 0, sizeof(list_t));
 	new->n = n;
-	if (str)
+	if (s)
 	{
 		new->s = _strdup(s);
 		if (!new->s)

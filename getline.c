@@ -138,7 +138,7 @@ int _getline(info_t *info_init, char **p, size_t *len)
 		return (ptr ? free(ptr), -1 : -1);
 
 	if (s)
-		_strncat(new_ptr, buffer + i, h - i);
+		_strncon(new_ptr, buffer + i, h - i);
 	else
 		_strncpy(new_ptr, buffer + i, h - i + 1);
 

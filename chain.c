@@ -13,7 +13,7 @@ int is_chain(info_t *info_init, char *buffer, size_t *ptr)
 
 	if (buffer[i] == '|' && buffer[i + 1] == '|')
 	{
-		buffer[j] = 0;
+		buffer[i] = 0;
 		i++;
 		info_init->cmd_buf_type = CMD_OR;
 	}
@@ -84,13 +84,13 @@ int replace_alias(info_t *info_init)
 		if (!node)
 			return (0);
 		free(info_init->argv[0]);
-		ptr = _strchr(node->str, '=');
+		ptr = _strchr(node->s, '=');
 		if (!ptr)
 			return (0);
 		ptr = _strdup(ptr + 1);
 		if (!ptr)
 			return (0);
-		info_init->argv[0] = p;
+		info_init->argv[0] = ptr;
 	}
 	return (1);
 }
@@ -126,7 +126,7 @@ int replace_vars(info_t *info_init)
 		if (node)
 		{
 			replace_string(&(info_init->argv[j]),
-					_strdup(_strchr(node->str, '=') + 1));
+					_strdup(_strchr(node->s, '=') + 1));
 			continue;
 		}
 		replace_string(&info_init->argv[j], _strdup(""));

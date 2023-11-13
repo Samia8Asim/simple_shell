@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 			}
 			return (EXIT_FAILURE);
 		}
-		info_init->readfh = fh;
+		info_init->readfd = fh;
 	}
 	populate_env_list(info_init);
 	read_history(info_init);

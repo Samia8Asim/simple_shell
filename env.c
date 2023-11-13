@@ -7,7 +7,7 @@
  */
 int _myenv(info_t *info_init)
 {
-	print_list_str(info_init->env);
+	print_string(info_init->env);
 	return (0);
 }
 
@@ -24,7 +24,7 @@ char *_getenv(info_t *info_init, const char *vname)
 
 	while (node)
 	{
-		p = start_with(node->str, vname);
+		ptr = start(node->s, vname);
 		if (ptr && *ptr)
 		{
 			return (ptr);
