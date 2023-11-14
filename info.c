@@ -9,7 +9,7 @@ void clear_info(info_t *info_init)
 	info_init->arg = NULL;
 	info_init->argv = NULL;
 	info_init->path = NULL;
-	info_clear->argc = 0;
+	info_init->argc = 0;
 }
 
 /**
@@ -24,21 +24,21 @@ void set_info(info_t *info_init,char **avec)
 	info_init->fname = avec[0];
 	if (info_init->arg)
 	{
-		info_init->argv = strtow(info->arg, " \t");
+		info_init->argv = strtow(info_init->arg, " \t");
 		if (!info_init->argv)
 		{
 			info_init->argv = malloc(sizeof(char *) * 2);
 			if (info_init->argv)
 			{
-				info_init->argv[0] = str_dup(info_init->arg);
+				info_init->argv[0] = _strdup(info_init->arg);
 				info_init->argv[1] = NULL;
 			}
 		}
 		for (; info_init->argv && info_init->argv[i]; i++)
 			;
 		info_init->argc = i;
-		replace_alias(info);
-		replace_vars(info);
+		replace_alias(info_init);
+		replace_vars(info_init);
 	}
 }
 

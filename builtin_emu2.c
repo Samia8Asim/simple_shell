@@ -102,7 +102,7 @@ int _myalias(info_t *info_init)
 		return (0);
 	}
 	i = 1;
-	for (info_init->argv[i])
+	while (info_init->argv[i])
 	{
 		ptr = _strchr(info_init->argv[i], '=');
 		if (ptr)

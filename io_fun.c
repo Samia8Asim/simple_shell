@@ -94,7 +94,7 @@ int read_history(info_t *info_init)
 		build_history_list(info_init, buffer + end, linec++);
 	free(buffer);
 	info_init->histcount = linec;
-	while (info->histcount-- >= HIST_MAX)
+	while (info_init->histcount-- >= HIST_MAX)
 		delete_node(&(info_init->history), 0);
 	renumber_history(info_init);
 	return (info_init->histcount);
@@ -112,7 +112,7 @@ int build_history_list(info_t *info_init, char *buffer, int linec)
 	list_t *node = NULL;
 
 	if (info_init->history)
-		node = info_t->history;
+		node = info_init->history;
 	add_node_end(&node, buffer, linec);
 
 	if (!info_init->history)

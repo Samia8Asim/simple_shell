@@ -9,7 +9,7 @@ int _myexit(info_t *info_init)
 {
 	int check_exit;
 
-	if (info->argv[1])
+	if (info_init->argv[1])
 	{
 		check_exit = _erratoi(info_init->argv[1]);
 		if (check_exit == -1)
@@ -35,9 +35,9 @@ int _myexit(info_t *info_init)
 int _mycd(info_t *info_init)
 {
 	int ret_chdir;
-	char *str, *dir, buf[1024]
+	char *str, *dir, buf[1024];
 
-		str = getcwd(buf, 1024);
+	str = getcwd(buf, 1024);
 	if (!str)
 		_puts("TODO: >>getcwd failure emsg here<<\n");
 	if (!info_init->argv[1])

@@ -53,7 +53,7 @@ int hsh(info_t *info_init, char **avec)
 int find_builtin(info_t *info_init)
 {
 	int i, builtin_ret = -1;
-	built_in_table builtintbl[] = {
+	builtin_table builtintbl[] = {
 		{"exit", _myexit},
 		{"env", _myenv},
 		{"help", _myhelp},
@@ -84,7 +84,7 @@ void find_cmd(info_t *info_init)
 	char *path = NULL;
 	int j, k;
 
-	info_init->path = info_inti->argv[0];
+	info_init->path = info_init->argv[0];
 	if (info_init->linecount_flag == 1)
 	{
 		info_init->line_count++;

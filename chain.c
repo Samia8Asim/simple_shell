@@ -51,7 +51,7 @@ void check_chain(info_t *info_init, char *buffer,
 	{
 		if (info_init->status)
 		{
-			buffer[i] = 0;
+			buffer[j] = 0;
 			i = leng;
 		}
 	}
@@ -59,7 +59,7 @@ void check_chain(info_t *info_init, char *buffer,
 	{
 		if (!info_init->status)
 		{
-			buffer[i] = 0;
+			buffer[j] = 0;
 			i = leng;
 		}
 	}
@@ -118,7 +118,7 @@ int replace_vars(info_t *info_init)
 		}
 		if (!_strcmp(info_init->argv[j], "$$"))
 		{
-			replace_string(&(info_init->argv[i]),
+			replace_string(&(info_init->argv[j]),
 					_strdup(convert_number(getpid(), 10, 0)));
 			continue;
 		}
