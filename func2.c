@@ -51,7 +51,7 @@ char *_strdup(const char *s)
 	if (!r)
 		return (NULL);
 	for (l++; l--;)
-		ret[l] = *--s;
+		r[l] = *--s;
 	return (r);
 }
 /**
@@ -61,9 +61,11 @@ char *_strdup(const char *s)
  */
 void _puts(char *s)
 {
+	int i;
+
 	if (!s)
 		return;
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
 }
 /**
