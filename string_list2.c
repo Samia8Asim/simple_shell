@@ -6,10 +6,13 @@
  */
 size_t list_len(const list_t *h)
 {
-	size_t i;
+	size_t i = 0;
 
-	for (i = 0; h != NULL; i++)
+	while (h)
+	{
 		h = h->next;
+		i++;
+	}
 	return (i);
 }
 /**
@@ -53,9 +56,9 @@ char **list_to_strings(list_t *head)
  */
 size_t print_list(const list_t *h)
 {
-	size_t i;
+	size_t i = 0;
 
-	for (i = 0; h != NULL; i++)
+	while (h)
 	{
 		_puts(convert_number(h->n, 10, 0));
 		_putchar(':');
@@ -63,6 +66,7 @@ size_t print_list(const list_t *h)
 		_puts(h->s ? h->s : "(nil)");
 		_puts("\n");
 		h = h->next;
+		i++;
 	}
 	return (i);
 }
@@ -94,13 +98,14 @@ list_t *node_starts_with(list_t *node, char *pre, char c)
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
-	size_t i;
+	size_t i = 0;
 
-	for (i = 0; head != NULL; i++)
+	while (head)
 	{
 		if (head == node)
 			return (i);
 		head = head->next;
+		i++;
 	}
 	return (-1);
 }

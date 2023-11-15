@@ -76,13 +76,14 @@ list_t *add_node_end(list_t **h, const char *s, int n)
  */
 size_t print_string(const list_t *h)
 {
-	size_t i;
+	size_t i = 0;
 
-	for (i = 0; h != NULL; i++)
+	while (h)
 	{
 		_puts(h->s ? h->s : "(nil)");
 		_puts("\n");
 		h = h->next;
+		i++;
 	}
 	return (i);
 }

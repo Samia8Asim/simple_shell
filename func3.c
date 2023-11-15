@@ -8,7 +8,7 @@
  */
 char *_strncpy(char *d, char *sr, int n)
 {
-	int i = 0, j;
+	int i, j;
 	char *s = d;
 
 	while (sr[i] != '\0' && i < n - 1)
@@ -36,9 +36,11 @@ char *_strncpy(char *d, char *sr, int n)
  */
 char *_strncon(char *d, char *sr, int n)
 {
-	int i = 0, j = 0;
+	int i, j;
 	char *s = d;
 
+	i = 0;
+	j = 0;
 	while (d[i] != '\0')
 		i++;
 	while (sr[j] != '\0' && j < n)
