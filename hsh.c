@@ -60,7 +60,7 @@ int find_builtin(info_t *info_init)
 		{"history", _myhistory},
 		{"setenv", _mysetenv},
 		{"unsetenv", _myunsetenv},
-		{"cd", _mycdltin_emu2.c},
+		{"cd", _mycd},
 		{"alias", _myalias},
 		{NULL, NULL}
 	};
