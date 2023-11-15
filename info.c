@@ -17,7 +17,7 @@ void clear_info(info_t *info_init)
  * @info_init: adress of struct
  * @avec: argument vector
  */
-void set_info(info_t *info_init,char **avec)
+void set_info(info_t *info_init, char **avec)
 {
 	int i = 0;
 

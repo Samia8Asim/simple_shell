@@ -50,7 +50,7 @@ int _unsetenv(info_t *info_init, char *str_var)
 
 /**
  * _setenv - Initialize or modify environment variable
- * @info: srtuctre to containing arguments
+ * @info_init: srtuctre to containing arguments
  * @str_var: property of string env var
  * @val: value of string env var
  * Return: 0(success)

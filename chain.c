@@ -3,7 +3,7 @@
 /**
  * is_chain - function to test if current char is a chain delimeter
  * @info_init: srtuctre to containing arguments
- * @buffe: the charater buffer
+ * @buffer: the charater buffer
  * @ptr: current position (in buf)adrdress
  * Return: 1 (chain delimeter), 0 otherwise
  */
@@ -69,7 +69,7 @@ void check_chain(info_t *info_init, char *buffer,
 
 /**
  * replace_alias - function that replaces an aliases in the tokenized string
- * @info: srtuctre to containing arguments
+ * @info_init: srtuctre to containing arguments
  * Return: 1 (replaced), 0 otherwise
  */
 int replace_alias(info_t *info_init)

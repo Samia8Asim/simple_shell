@@ -45,7 +45,7 @@ ssize_t input_buf(info_t *info_init, char **buffer, size_t *size)
 
 /**
  * get_input - function thatgets a line minus the newline
- * @info: srtuctre to containing arguments
+ * @info_init: srtuctre to containing arguments
  * Return: bytes
  */
 ssize_t get_input(info_t *info_init)

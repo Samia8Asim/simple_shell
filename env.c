@@ -12,7 +12,7 @@ int _myenv(info_t *info_init)
 }
 
 /**
- * _getenv: get environment variable value
+ * _getenv - get environment variable value
  * @info_init: srtuctre to containing arguments
  * @vname: name of variable
  * Return: the variable value

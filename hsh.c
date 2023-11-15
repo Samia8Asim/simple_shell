@@ -60,7 +60,7 @@ int find_builtin(info_t *info_init)
 		{"history", _myhistory},
 		{"setenv", _mysetenv},
 		{"unsetenv", _myunsetenv},
-		{"cd", _mycd},
+		{"cd", _mycdltin_emu2.c},
 		{"alias", _myalias},
 		{NULL, NULL}
 	};
@@ -77,7 +77,7 @@ int find_builtin(info_t *info_init)
 
 /**
  * find_cmd - function thar finds a command in PATH
- * @info: srtuctre to containing arguments
+ * @info_init: srtuctre to containing arguments
  */
 void find_cmd(info_t *info_init)
 {

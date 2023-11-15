@@ -82,7 +82,7 @@ int print_alias(list_t *node)
 
 /**
  * _myalias - function to mimics the builtin alias
- * @info: srtuctre to containing arguments
+ * @info_init: srtuctre to containing arguments
  * Return: 0(success)
  */
 int _myalias(info_t *info_init)
