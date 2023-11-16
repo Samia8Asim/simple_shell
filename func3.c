@@ -11,6 +11,7 @@ char *_strncpy(char *d, char *sr, int n)
 	int i, j;
 	char *s = d;
 
+	i = 0;
 	while (sr[i] != '\0' && i < n - 1)
 	{
 		d[i] = sr[i];
