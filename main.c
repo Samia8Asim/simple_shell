@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	info_t info_init[] = { INFO_INIT };
-	int fh = 1;
+	int fh = 2;
 
 	asm ("mov %1, %0\n\t"
 			"add $3, %0"

@@ -81,14 +81,12 @@ int read_history(info_t *info_init)
 	if (rdlen <= 0)
 		return (free(buffer), 0);
 	close(fh);
-	i = 0;
-	while (i < fsize)
+	for (i = 0; i < fsize; i++)
 		if (buffer[i] == '\n')
 		{
 			buffer[i] = 0;
 			build_history_list(info_init, buffer + end, linec++);
 			end = i + 1;
-			i++;
 		}
 	if (end != i)
 		build_history_list(info_init, buffer + end, linec++);

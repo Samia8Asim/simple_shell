@@ -34,7 +34,7 @@ void set_info(info_t *info_init, char **avec)
 				info_init->argv[1] = NULL;
 			}
 		}
-		for (; info_init->argv && info_init->argv[i]; i++)
+		for (i = 0; info_init->argv && info_init->argv[i]; i++)
 			;
 		info_init->argc = i;
 		replace_alias(info_init);
@@ -64,7 +64,7 @@ void free_info(info_t *info_init, int allf)
 		if (info_init->alias)
 			free_list(&(info_init->alias));
 		ffree(info_init->environ);
-		info_init->environ = NULL;
+			info_init->environ = NULL;
 		bfree((void **)info_init->cmd_buf);
 		if (info_init->readfd > 2)
 			close(info_init->readfd);
