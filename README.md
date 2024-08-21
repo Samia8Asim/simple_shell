@@ -73,4 +73,4 @@ Once the shell is running, you can enter commands as you would in a standard Uni
 
 ## Authors
 
-This project was developed by [Samia Asim](https://github.com/Samia8Asim) [and Rawan omer](https://github.com/rawan-omer) as part of the ALX Software Engineering program.
+This project was developed by [Samia Asim](https://github.com/Samia8Asim) and [Rawan omer](https://github.com/rawan-omer) as part of the ALX Software Engineering program.
